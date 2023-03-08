@@ -8,6 +8,12 @@ type Registry = {
 };
 
 export default function continentesRepresentados(array: Registry[]): boolean {
-  // TODO: implement
-  return false;
+  const searchFor = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+
+  const represented: string[] = [];
+
+  array.forEach((dev) => represented.push(dev.continent));
+  const uniqueRepresented = [...new Set(represented)].sort();
+
+  return JSON.stringify(searchFor) === JSON.stringify(uniqueRepresented);
 }
