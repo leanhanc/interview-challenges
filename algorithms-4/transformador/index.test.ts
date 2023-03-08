@@ -9,7 +9,7 @@ describe("transformer", () => {
         nombres: ["Juan", "Pedro", "María"],
         edades: [23, 45, 18],
       })
-    ).toBe([
+    ).toMatchObject([
       {
         id: 1,
         nombre: "Juan",
